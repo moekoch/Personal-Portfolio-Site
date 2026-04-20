@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Morgan Koch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="assets/Logo_White.png" alt="MK">
+      <span class="logo-name">Morgan Koch</span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <div class="page-hero">
+      <div class="page-hero-content">
+        <p class="page-hero-label">Career History</p>
+        <h1>My<br><em style="color:var(--gold-lt);">Resume</em></h1>
+        <p>A full overview of my education, experience, skills, and certifications.</p>
+      </div>
+    </div>
+
+    <!-- ===== RESUME CONTENT ===== -->
+    <div class="resume-wrap">
+
+      <!-- Download CTA -->
+      <div class="resume-download-row fade-in">
+        <a href="Koch_Resume_01-2026.pdf" download class="btn-primary">
+          <i class="fas fa-download" style="margin-right:10px;"></i>Download PDF
+        </a>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="resume-block fade-up">
+        <p class="resume-block-title">Education</p>
+
+        <div class="resume-item">
+          <div>
+            <h3 class="resume-item-title">B.S. Computer Science</h3>
+            <p class="resume-item-org">Penn State Behrend — Erie, PA</p>
+            <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+              College of Engineering &amp; Black School of Business · Minor in Management Information Systems ·
+              GPA: 3.29<br>
+              <span style="color:var(--gold); font-weight:500;">AAUW Carlisle Higher Education Scholarship</span><br>
+              <span style="color:var(--gold); font-weight:500;">Shelly and Shirley Czulewicz Trustee Scholarship</span>
+            </p>
+          </div>
+          <div class="resume-item-date">
+            Expected<br>May 2027
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- EXPERIENCE -->
+      <div class="resume-block fade-up delay-1">
+        <p class="resume-block-title">Relevant Experience</p>
+
+        <div class="resume-item">
+          <div>
+            <h3 class="resume-item-title">App Development Team Lead</h3>
+            <p class="resume-item-org">Penn State Behrend VAR Lab — Erie, PA</p>
+            <ul>
+              <li>Lead app development initiatives using React Native and Expo Go, overseeing the software development lifecycle</li>
+              <li>Manage and collaborate with a team of 5 programmers, ensuring code quality and milestone tracking</li>
+              <li>Oversee project pacing, deliverables, and performance metrics</li>
+              <li>Test, debug, and optimize code for performance and user experience consistency</li>
+            </ul>
+          </div>
+          <div class="resume-item-date">Mar 2025<br>– Present</div>
+        </div>
+
+        <div class="resume-item">
+          <div>
+            <h3 class="resume-item-title">IT Project Management Intern</h3>
+            <p class="resume-item-org">TE Connectivity — Harrisburg, PA</p>
+            <ul>
+              <li>Organized and facilitated meetings with project stakeholders, ensuring clear communication and progress alignment</li>
+              <li>Contributed to creation of PM documentation including CONOPS, BRD, and RASCI charts</li>
+              <li>Participated in daily multi-project meetings and a week-long global trade workshop</li>
+              <li>Supported documentation and communication processes across initiatives</li>
+            </ul>
+          </div>
+          <div class="resume-item-date">May –<br>Aug 2025</div>
+        </div>
+        
+        <div class="resume-item">
+          <div>
+            <h3 class="resume-item-title">Student Technician</h3>
+            <p class="resume-item-org">Penn State Behrend Information Technology Services — Erie, PA</p>
+            <ul>
+              <li>Provide IT support in computer labs, classrooms, and offices</li>
+              <li>Respond to staff members to resolve tech issues using the ticketing system ServiceNow</li>
+              <li>Process salvageable devices and wipe disks using KillDisk</li>
+            </ul>
+          </div>
+          <div class="resume-item-date">Apr 2024 -<br>Dec 2025</div>
+        </div>
+
+        <div class="resume-item">
+          <div>
+            <h3 class="resume-item-title">Information Technology Intern</h3>
+            <p class="resume-item-org">Big Spring School District — Newville, PA</p>
+            <ul>
+              <li>Collaborated to factory reset and prepare devices on the school domain</li>
+              <li>Repaired laptops increasing the productivity of upper-level techs</li>
+              <li>Dismantled Windows and Chrome OS devices for future repair parts</li>
+              <li>Organized classroom tech — software updates, hardware setup, cord management</li>
+            </ul>
+          </div>
+          <div class="resume-item-date">Jun - Aug<br>2023 &amp; 2024</div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="resume-block fade-up delay-2">
+        <p class="resume-block-title">Skills &amp; Involvement</p>
+
+        <div style="display:grid; grid-template-columns: repeat(2,1fr); gap:32px;">
+          <div>
+            <p style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:12px;">Languages</p>
+            <div class="project-chips">
+              <span class="chip">Java</span>
+              <span class="chip">SQL</span>
+              <span class="chip">C++</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">React Native</span>
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+              <span class="chip">Python</span>
+            </div>
+          </div>
+          <div>
+            <p style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:12px;">Software &amp; Tools</p>
+            <div class="project-chips">
+              <span class="chip">Microsoft Office</span>
+              <span class="chip">Google Workspace</span>
+              <span class="chip">ServiceNow</span>
+              <span class="chip">KillDisk</span>
+              <span class="chip">Expo Go</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:28px;">
+          <p style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:12px;">Involvements</p>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.7;">
+            VAR Lab &nbsp;&middot;&nbsp;
+            Behrend eSports Design Board (Design, Web Programming, Casual Gaming)
+          </p>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="resume-block fade-up delay-3">
+        <p class="resume-block-title">Certifications</p>
+
+        <div class="cert-item">
+          <div class="cert-icon"><i class="fas fa-brain"></i></div>
+          <div>
+            <h3 class="cert-title">NVIDIA Fundamentals of Deep Learning</h3>
+            <p class="cert-org">NVIDIA &amp; Penn State Behrend School of Engineering · October 26, 2024</p>
+            <p style="font-size:13px; color:var(--text-muted); margin-top:8px; line-height:1.7;">
+              Completed an instructor-led course providing a foundation in deep learning techniques.
+              Final assessment required ≥92% accuracy on the validation dataset.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /resume-wrap -->
+
+    <!-- CTA Banner -->
+    <section style="background:var(--dark-deep); text-align:center; padding:72px 8%;">
+      <p class="section-label" style="color:var(--gold);">Interested?</p>
+      <h2 class="section-title fade-up" style="color:#fff; margin:0 auto 20px;">Want to Work Together?</h2>
+      <p style="font-size:14px; color:rgba(255,255,255,0.5); max-width:400px; margin:0 auto 40px; line-height:1.8;">
+        I'm currently open to internships, part-time roles, and collaborative projects for 2026-2027.
+      </p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="Koch_Resume_01-2026.pdf" download class="btn-primary">
+          <i class="fas fa-download" style="margin-right:8px;"></i>Download Résumé
+        </a>
+        <a href="contact.html" class="btn-outline" style="border-color:rgba(255,255,255,0.3); color:rgba(255,255,255,0.7);">
+          Contact Me
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/Logo_White.png" alt="MK Logo" class="footer-logo">
+          <div>
+            <div class="footer-name">Morgan Koch</div>
+            <div class="footer-tagline">Programmer &amp; Project Manager</div>
+          </div>
+        </div>
+        <p class="footer-desc">CS student at Penn State Behrend, passionate about building solutions to complex problems.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/moekoch" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/moekoch" target="_blank" rel="noopener" class="social-link"><i class="fab fa-github"></i></a>
+        <a href="mailto:ekoch.morgan@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <nav>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
