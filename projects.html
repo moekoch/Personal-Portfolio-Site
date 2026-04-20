@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Morgan Koch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="assets/Logo_White.png" alt="MK">
+      <span class="logo-name">Morgan Koch</span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <div class="page-hero">
+      <div class="page-hero-content">
+        <p class="page-hero-label">My Work</p>
+        <h1>Projects &amp;<br><em style="color:var(--gold-lt);">Experience</em></h1>
+        <p>A collection of the projects, roles, and initiatives I've dedicated my skills towards.</p>
+      </div>
+    </div>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="projects-full">
+      <!-- Filter Buttons -->
+      <div class="projects-filter fade-in">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="app-dev">App Development</button>
+        <button class="filter-btn" data-filter="it-pm">IT &amp; Project Mgmt</button>
+        <button class="filter-btn" data-filter="web">Web &amp; Design</button>
+        <button class="filter-btn" data-filter="ai">AI &amp; Research</button>
+      </div>
+
+      <div class="projects-full-grid">
+
+        <!-- VAR Lab -->
+        <div class="project-card-lg fade-up" data-category="app-dev">
+          <div class="card-img-wrap" style="background:linear-gradient(135deg,#334551,#447199);">
+            <img src="assets/Logo_Black.png"
+                 alt="VAR Lab App Development"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card-body">
+            <p class="project-tag">App Development &middot; Team Lead</p>
+            <h3>VAR Lab Application - Landing Place</h3>
+            <div class="project-chips">
+              <span class="chip">React Native</span>
+              <span class="chip">Expo Go</span>
+              <span class="chip">AR/VR</span>
+              <span class="chip">Team Lead</span>
+            </div>
+            <p>
+              As App Development Team Lead at Penn State Behrend's Virtual/Augmented Reality Lab,
+              I oversee the full software development lifecycle for a mental health mobile applications.
+              Leading a team of 5 programmers, managing code quality, milestone tracking, and
+              optimizing for performance and UX consistency.
+            </p>
+            <a href="contact.html" class="project-link">Inquire About This Work <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- TE Connectivity -->
+        <div class="project-card-lg fade-up delay-1" data-category="it-pm">
+          <div class="card-img-wrap" style="background:linear-gradient(135deg,#be9c67,#334551);">
+            <img src="assets/Logo_Black.png"
+                 alt="TE Connectivity IT PM Internship"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card-body">
+            <p class="project-tag">IT &middot; Project Management &middot; Internship</p>
+            <h3>TE Connectivity Internship</h3>
+            <div class="project-chips">
+              <span class="chip">CONOPS</span>
+              <span class="chip">BRD</span>
+              <span class="chip">RASCI</span>
+              <span class="chip">Stakeholder Mgmt</span>
+              <span class="chip">Global Trade</span>
+            </div>
+            <p>
+              Summer 2025 IT Project Management intern at TE Connectivity (Harrisburg, PA).
+              Organized and facilitated meetings with stakeholders, created PM documentation
+              including CONOPS, BRD, and RASCI charts, and participated in a week-long
+              global trade workshop covering multi-region coordination.
+            </p>
+            <a href="contact.html" class="project-link">Inquire About This Work <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Personal ePortfolio -->
+        <div class="project-card-lg fade-up" data-category="web">
+          <div class="card-img-wrap" style="background:linear-gradient(135deg,#447199,#be9c67);">
+            <img src="assets/Logo_Black.png"
+                 alt="Personal ePortfolio"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card-body">
+            <p class="project-tag">Web &middot; Design &middot; Frontend</p>
+            <h3>Personal ePortfolio</h3>
+            <div class="project-chips">
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Responsive Design</span>
+              <span class="chip">Brand Identity</span>
+            </div>
+            <p>
+              Designed and built this portfolio website from scratch with a complete personal
+              brand system. Features include a dark/light mode toggle, smooth scroll animations,
+              mobile-responsive layout, clip-path image shapes, and a custom contact modal.
+            </p>
+            <a href="https://github.com" target="_blank" rel="noopener" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- NVIDIA Deep Learning -->
+        <div class="project-card-lg fade-up delay-1" data-category="ai">
+          <div class="card-img-wrap" style="background:linear-gradient(135deg,#222f3a,#6b9fc4);">
+            <img src="assets/Logo_Black.png"
+                 alt="NVIDIA Deep Learning Certification"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card-body">
+            <p class="project-tag">AI &middot; Deep Learning &middot; Certification</p>
+            <h3>NVIDIA Deep Learning Fundamentals</h3>
+            <div class="project-chips">
+              <span class="chip">Deep Learning</span>
+              <span class="chip">Neural Networks</span>
+              <span class="chip">NVIDIA</span>
+              <span class="chip">Python</span>
+            </div>
+            <p>
+              Completed an instructor-led NVIDIA deep learning course sponsored by the
+              Penn State Behrend School of Engineering. Passed the final assessment with
+              ≥92% accuracy on the validation dataset, earning the NVIDIA Fundamentals
+              of Deep Learning Certification (October 2024).
+            </p>
+            <a href="contact.html" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:var(--bg-alt); text-align:center; padding:80px 8%;">
+      <p class="section-label fade-in">Have something in mind?</p>
+      <h2 class="section-title fade-up" style="margin:0 auto 20px;">Let's Build Something Together</h2>
+      <p style="font-size:14px; color:var(--text-muted); max-width:440px; margin:0 auto 40px; line-height:1.8;">
+        Open to internships, research opportunities, and collaborative projects.
+        Reach out and let's see what we can create.
+      </p>
+      <a href="contact.html" class="btn-primary fade-up delay-1">Start a Conversation</a>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/Logo_White.png" alt="MK Logo" class="footer-logo">
+          <div>
+            <div class="footer-name">Morgan Koch</div>
+            <div class="footer-tagline">Programmer &amp; Project Manager</div>
+          </div>
+        </div>
+        <p class="footer-desc">CS student at Penn State Behrend, passionate about building solutions to complex problems.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/moekoch" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/moekoch" target="_blank" rel="noopener" class="social-link"><i class="fab fa-github"></i></a>
+        <a href="mailto:ekoch.morgan@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <nav>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

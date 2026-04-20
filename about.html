@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Morgan Koch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="assets/Logo_White.png" alt="MK">
+      <span class="logo-name">Morgan Koch</span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <div class="page-hero">
+      <div class="page-hero-content">
+        <p class="page-hero-label">Get to Know Me</p>
+        <h1>About<br><em style="color:var(--gold-lt);">Morgan</em></h1>
+        <p>Programmer, project manager, and lifelong learner based in the Harrisburg, PA area.</p>
+      </div>
+    </div>
+
+    <!-- ===== BIO SECTION ===== -->
+    <section class="about-section">
+      <div class="about-grid">
+
+        <div class="about-image-wrap fade-in">
+          <div class="about-img-shape">
+            <!--
+              REPLACE WITH YOUR OWN PHOTO
+              Recommended: portrait, natural/professional setting
+            -->
+            <img src="assets/MorganFlowers.jpg"
+                 alt="Morgan Koch — Replace with your photo">
+          </div>
+        </div>
+
+        <div class="about-content fade-up delay-1">
+          <p class="section-label">My Story</p>
+          <h2>Creatively Analytical</h2>
+
+          <p>
+            I'm a Computer Science student at Penn State Behrend's College of Engineering,
+            with a minor in Management Information Systems. I'm drawn to the intersection
+            of technology and people — where clean code meets clear communication.
+          </p>
+          <p>
+            Whether I'm leading a team of developers in the VAR Lab, writing project
+            documentation at TE Connectivity, or building this very portfolio, I bring
+            the same energy: thoughtful, precise, and always pushing for better.
+          </p>
+          <p>
+            Outside of academics, I'm involved in the Behrend eSports Design Board —
+            handling design, web programming, and yes, a little casual gaming.
+          </p>
+
+          <div class="about-details">
+            <div class="about-detail">
+              <div class="about-detail-label">University</div>
+              <div class="about-detail-value">Penn State Behrend</div>
+            </div>
+            <div class="about-detail">
+              <div class="about-detail-label">Graduation</div>
+              <div class="about-detail-value">May 2027</div>
+            </div>
+            <div class="about-detail">
+              <div class="about-detail-label">Major</div>
+              <div class="about-detail-value">B.S. Computer Science</div>
+            </div>
+            <div class="about-detail">
+              <div class="about-detail-label">Minor</div>
+              <div class="about-detail-value">Management Info Systems</div>
+            </div>
+            <div class="about-detail">
+              <div class="about-detail-label">GPA</div>
+              <div class="about-detail-value">3.29</div>
+            </div>
+            <div class="about-detail">
+              <div class="about-detail-label">Location</div>
+              <div class="about-detail-value">Harrisburg, PA</div>
+            </div>
+          </div>
+
+          <div class="signature-wrap">
+            <img src="assets/SignatureHeart.png" alt="Morgan Koch signature">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="skills-section">
+      <p class="section-label fade-in">What I work with</p>
+      <h2 class="section-title fade-up">Skills &amp; Tools</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-category fade-up">
+          <h3><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">React Native</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-up delay-1">
+          <h3><i class="fas fa-toolbox"></i> Frameworks &amp; Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React Native</span>
+            <span class="skill-tag">Expo Go</span>
+            <span class="skill-tag">ServiceNow</span>
+            <span class="skill-tag">KillDisk</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-up delay-2">
+          <h3><i class="fas fa-briefcase"></i> Professional</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Microsoft Office</span>
+            <span class="skill-tag">Google Workspace</span>
+            <span class="skill-tag">CONOPS Writing</span>
+            <span class="skill-tag">BRD</span>
+            <span class="skill-tag">RASCI Charts</span>
+            <span class="skill-tag">Stakeholder Mgmt</span>
+            <span class="skill-tag">Deep Learning</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION & EXPERIENCE TIMELINE ===== -->
+     <!-- probably just leave this section to be content for resume tab -->
+     <!--
+    <section class="edu-section">
+      <p class="section-label fade-in">Background</p>
+      <h2 class="section-title fade-up">Education &amp; Experience</h2>
+
+      <div class="timeline" style="margin-top:56px;">
+
+        <div class="timeline-item fade-up">
+          <div class="timeline-date">2023 – Present</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>B.S. Computer Science</h3>
+            <p class="timeline-org">Penn State Behrend — Erie, PA</p>
+            <p>College of Engineering &amp; Black School of Business. Minor in Management Information Systems. GPA: 3.29. Recipient of the AAUW Carlisle Higher Education Scholarship and Shelly &amp; Shirley Czulewicz Trustee Scholarship.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up delay-1">
+          <div class="timeline-date">Mar 2025 - Present</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>App Development Team Lead</h3>
+            <p class="timeline-org">Penn State Behrend VAR Lab — Erie, PA</p>
+            <ul>
+              <li>Leading app development using React Native and Expo Go across the full SDLC</li>
+              <li>Managing a team of 5 programmers with code reviews and milestone tracking</li>
+              <li>Testing, debugging, and optimizing for performance and UX consistency</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up delay-2">
+          <div class="timeline-date">May - Aug 2025</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>IT Project Management Intern</h3>
+            <p class="timeline-org">TE Connectivity — Harrisburg, PA</p>
+            <ul>
+              <li>Organized and facilitated stakeholder meetings with clear communication alignment</li>
+              <li>Created CONOPS, BRD, and RASCI project management documentation</li>
+              <li>Participated in a week-long global trade workshop for multi-region coordination</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up delay-3">
+          <div class="timeline-date">Apr 2024 - Dec 2025</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Student Technician</h3>
+            <p class="timeline-org">Penn State Behrend ITS — Erie, PA</p>
+            <ul>
+              <li>IT support across computer labs, classrooms, and offices</li>
+              <li>Ticket resolution via ServiceNow, disk-wiping with KillDisk</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+      -->
+    <!-- ===== CTA ===== -->
+    <section style="background:var(--dark-deep); text-align:center; padding:80px 8%;">
+      <p class="section-label" style="color:var(--gold);">Ready to connect?</p>
+      <h2 class="section-title fade-up" style="color:#fff; margin-bottom:24px;">Let's Work Together</h2>
+      <p style="color:rgba(255,255,255,0.5); font-size:14px; max-width:440px; margin:0 auto 40px; line-height:1.8;">
+        Whether you have an opportunity, a project, or just want to say hello — my inbox is open.
+      </p>
+      <a href="contact.html" class="btn-primary">Get In Touch</a>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/Logo_White.png" alt="MK Logo" class="footer-logo">
+          <div>
+            <div class="footer-name">Morgan Koch</div>
+            <div class="footer-tagline">Programmer &amp; Project Manager</div>
+          </div>
+        </div>
+        <p class="footer-desc">CS student at Penn State Behrend, passionate about building solutions to complex problems.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/moekoch" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/moekoch" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:ekoch.morgan@gmail.com" class="social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <nav>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morgan Koch — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="assets/Logo_White.png" alt="MK">
+      <span class="logo-name">Morgan Koch</span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="hero-blob"></div>
+
+      <div class="hero-content">
+        <div class="hero-greeting fade-in">Hi, I'm</div>
+        <h1 class="hero-name fade-up">Morgan<br>Koch</h1>
+        <p class="hero-title fade-in delay-1">Programmer &amp; Project Manager</p>
+        <p class="hero-description fade-in delay-2">
+          I'm a CS student at Penn State Behrend blending technical precision with creative problem-solving. Building apps, managing cross-functional teams, and designing things that are interactive.
+        </p>
+        <div class="hero-actions fade-up delay-2">
+          <button id="openModal" class="btn-primary">Contact Me</button>
+          <a href="projects.html" class="btn-outline">View My Work</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-frame fade-in delay-1">
+          <img
+            src="assets/MorganFlowers.jpg"
+            alt="Morgan Koch — Replace with your photo"
+            class="hero-photo"
+            onerror="this.style.display='none';document.getElementById('photoPH').style.display='flex';"
+          >
+          <div class="hero-photo-placeholder" id="photoPH" style="display:none;">
+            <i class="fas fa-user"></i>
+            <span>Add Your Photo Here</span>
+          </div>
+
+          <div class="hero-badge">
+            <div class="hero-badge-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="hero-badge-text">
+              Penn State Behrend
+              <span>Class of 2027</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== THREE PILLARS ===== -->
+    <section id="pillars">
+      <div class="pillar fade-up">
+        <div class="pillar-number">01</div>
+        <h3 class="pillar-title">Creative Technologist</h3>
+        <p class="pillar-text">Bridging technical execution and creative vision - from applications to polished web experiences. I build things that work beautifully.</p>
+      </div>
+      <div class="pillar fade-up delay-1">
+        <div class="pillar-number">02</div>
+        <h3 class="pillar-title">Detail-Oriented</h3>
+        <p class="pillar-text">Whether debugging code or managing project timelines, precision and care define every deliverable. Quality isn't optional - it's the standard.</p>
+      </div>
+      <div class="pillar fade-up delay-2">
+        <div class="pillar-number">03</div>
+        <h3 class="pillar-title">Adaptable</h3>
+        <p class="pillar-text">From React Native to SQL, from CONOPS to KillDisk - I excel across diverse environments and pick up new tools with enthusiasm.</p>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section id="featured">
+      <div class="section-header fade-up">
+        <div>
+          <p class="section-label">Selected Work</p>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <a href="projects.html" class="project-link">
+          View All Projects <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card fade-up">
+          <div class="project-card-image">
+            <img class="project-card-img"
+              src="assets/VAR_LinkedIn.jpg"
+              alt="VAR Lab App Development">
+          </div>
+          <div class="project-card-body">
+            <p class="project-tag">React Native &middot; AR/VR</p>
+            <h3>VAR Lab App Dev</h3>
+            <p>Leading a team of 5 developers building applications using React Native and Expo Go at Penn State's Virtual Augmented Reality (VAR) Lab.</p>
+            <a href="projects.html" class="project-link">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card fade-up delay-1">
+          <div class="project-card-image">
+            <img class="project-card-img"
+              src="assets/TE_Interns.jpg"
+              alt="TE Connectivity Internship">
+          </div>
+          <div class="project-card-body">
+            <p class="project-tag">IT &middot; Project Management</p>
+            <h3>TE Connectivity Internship</h3>
+            <p>IT PM intern - writing CONOPS, BRD, and RASCI charts, facilitating stakeholder meetings, and contributing to a week-long global trade workshop.</p>
+            <a href="projects.html" class="project-link">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card fade-up delay-2">
+          <div class="project-card-image">
+            <img class="project-card-img"
+              src="assets/WorkingOnPortfolioSite.jpg"
+              alt="Personal Portfolio">
+          </div>
+          <div class="project-card-body">
+            <p class="project-tag">HTML &middot; CSS &middot; JS</p>
+            <h3>Personal ePortfolio</h3>
+            <p>Designing and coding this portfolio site from scratch - applying custom brand identity, responsive layouts, and thoughtful JavaScript interactions.</p>
+            <a href="projects.html" class="project-link">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT TEASER ===== -->
+    <section id="about-teaser">
+      <p class="section-label fade-in">Get to know me</p>
+      <h2 class="section-title fade-up">
+        CS Student.<br>
+        <em style="color:var(--gold);">Problem Solver.</em>
+      </h2>
+      <p class="section-subtitle fade-in delay-1">
+        I'm a junior at Penn State Behrend studying Computer Science with a Minor in MIS.
+        When I'm not coding, I'm leading teams, diving into new technologies, and building
+        things that matter.
+      </p>
+      <a href="about.html" class="btn-primary fade-up delay-2" style="margin-top:40px; display:inline-block;">
+        Learn More About Me
+      </a>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/Logo_White.png" alt="MK Logo" class="footer-logo">
+          <div>
+            <div class="footer-name">Morgan Koch</div>
+            <div class="footer-tagline">Programmer &amp; Project Manager</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          CS student at Penn State Behrend, passionate about building solutions to complex problems. Always learning, always creating.
+        </p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/moekoch" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/moekoch" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:ekoch.morgan@gmail.com" class="social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <nav>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ===== CONTACT MODAL ===== -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Close">&times;</button>
+      <h2>Get In Touch</h2>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Smith">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="jane@example.com">
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="4" placeholder="Tell me about your project or opportunity..."></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%; margin-top:8px;" type="button">
+        Send Message
+      </button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
