@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAR Lab App Dev — Morgan Koch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Project detail styles – you can paste these into style.css ── */
+    .detail-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: rgba(255,255,255,0.45);
+      margin-bottom: 28px;
+      transition: color 0.3s ease;
+    }
+    .detail-back:hover { color: var(--gold); }
+    .detail-back i { font-size: 10px; }
+
+    .page-hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .page-hero-chip {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.7);
+      font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; padding: 5px 14px;
+      border-radius: 20px; border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .detail-section { padding: 88px 8%; }
+    .detail-grid {
+      display: grid; grid-template-columns: 1fr 300px;
+      gap: 72px; align-items: start;
+    }
+
+    .detail-main > * + * { margin-top: 44px; }
+    .detail-block-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .detail-main h2 {
+      font-size: clamp(30px, 3.5vw, 42px);
+      color: var(--text); margin-bottom: 16px;
+    }
+    .detail-main p {
+      font-size: 14px; color: var(--text-muted);
+      line-height: 1.9; margin-bottom: 14px;
+    }
+    .detail-main p:last-child { margin-bottom: 0; }
+
+    .contribution-list { list-style: none; margin-top: 4px; display: grid; gap: 10px; }
+    .contribution-list li {
+      display: flex; gap: 16px; align-items: flex-start;
+      font-size: 13px; color: var(--text-muted); line-height: 1.75;
+    }
+    .contribution-list li::before {
+      content: '—'; color: var(--gold);
+      flex-shrink: 0; margin-top: 1px;
+    }
+
+    .detail-sidebar { display: grid; gap: 20px; }
+    .sidebar-card {
+      background: var(--surface); border-radius: var(--radius-lg);
+      padding: 28px; box-shadow: var(--shadow);
+    }
+    .sidebar-card-title {
+      font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .sidebar-meta { display: grid; gap: 14px; }
+    .sidebar-meta-item {}
+    .sidebar-meta-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+    .sidebar-meta-value { font-size: 13px; font-weight: 500; color: var(--text); }
+    .sidebar-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .detail-hero-img {
+      width: 100%; border-radius: var(--radius-lg);
+      overflow: hidden; margin-top: 48px;
+      box-shadow: var(--shadow-lg); aspect-ratio: 16/9;
+    }
+    .detail-hero-img img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .detail-hero-img.contain img {
+      object-fit: contain; padding: 2.5rem;
+      background: linear-gradient(135deg, #334551, #447199);
+    }
+
+    .detail-next {
+      background: var(--dark-deep); padding: 88px 8%;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    body.dark .detail-next { background: #111c26; }
+    .detail-next::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(circle at 50% 0%, rgba(190,156,103,0.07) 0%, transparent 65%);
+    }
+    .detail-next p.section-label { position: relative; }
+    .detail-next h2 {
+      font-size: clamp(36px, 5vw, 60px); color: #fff;
+      margin: 0 auto 16px; position: relative;
+    }
+    .detail-next .next-sub {
+      font-size: 13px; color: rgba(255,255,255,0.4);
+      max-width: 420px; margin: 0 auto 40px; line-height: 1.8;
+      position: relative;
+    }
+    .detail-next-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+    .btn-outline-light {
+      display: inline-block;
+      padding: 14px 36px; background: transparent;
+      color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius); cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-outline-light:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    @media (max-width: 960px) {
+      .detail-grid { grid-template-columns: 1fr; gap: 48px; }
+      .detail-sidebar { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .detail-sidebar { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="assets/Logo_White.png" alt="MK">
+      <span class="logo-name">Morgan Koch</span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <div class="page-hero">
+      <a href="projects.html" class="detail-back">
+        <i class="fas fa-arrow-left"></i> All Projects
+      </a>
+      <p class="page-hero-label">App Development &middot; Team Lead</p>
+      <h1>VAR Lab<br><em style="color:var(--gold-lt);">App Dev</em></h1>
+      <p>Leading a team of 5 developers building mental health mobile applications at Penn State Behrend's Virtual Augmented Reality Lab.</p>
+      <div class="page-hero-chips">
+        <span class="page-hero-chip">React Native</span>
+        <span class="page-hero-chip">Expo Go</span>
+        <span class="page-hero-chip">AR/VR</span>
+        <span class="page-hero-chip">Team Lead</span>
+      </div>
+    </div>
+
+    <!-- ===== HERO IMAGE ===== -->
+    <div style="padding: 0 8%; margin-top: -32px; position: relative; z-index: 2;">
+      <div class="detail-hero-img fade-up">
+        <img src="assets/VAR_LinkedIn.jpg" alt="VAR Lab App Development" />
+      </div>
+    </div>
+
+    <!-- ===== DETAIL CONTENT ===== -->
+    <section class="detail-section">
+      <div class="detail-grid">
+
+        <!-- Main -->
+        <div class="detail-main">
+
+          <div class="fade-up">
+            <p class="detail-block-label">Overview</p>
+            <h2>Building for Mental Health</h2>
+            <p>
+              The Penn State Behrend Virtual Augmented Reality (VAR) Lab is an interdisciplinary
+              research hub where students and faculty explore emerging technologies. As App Development
+              Team Lead, I oversee the design and build of a mental health mobile application —
+              Landing Place — aimed at supporting student wellbeing through accessible, interactive tools.
+            </p>
+            <p>
+              The project runs on React Native with Expo Go, enabling cross-platform deployment
+              from a single codebase. My role sits at the intersection of engineering and
+              project management: writing code alongside the team while coordinating timelines,
+              tracking milestones, and ensuring consistent UX quality across every release.
+            </p>
+          </div>
+
+          <div class="fade-up">
+            <p class="detail-block-label">My Role &amp; Responsibilities</p>
+            <h2>What I Do on This Project</h2>
+            <ul class="contribution-list">
+              <li>Lead app development initiatives, overseeing the full software development lifecycle from requirements through testing and deployment.</li>
+              <li>Manage and mentor a team of 5 programmers — conducting code reviews and ensuring adherence to quality standards.</li>
+              <li>Own project pacing and milestone tracking, adjusting scope and priorities to keep the team on schedule.</li>
+              <li>Architect feature implementations and resolve complex technical blockers across the codebase.</li>
+              <li>Test, debug, and optimize code for performance, accessibility, and UX consistency across iOS and Android.</li>
+              <li>Collaborate with faculty advisors and stakeholders to align technical output with research goals.</li>
+            </ul>
+          </div>
+
+          <div class="fade-up">
+            <p class="detail-block-label">Technical Highlights</p>
+            <h2>Under the Hood</h2>
+            <p>
+              The application leverages React Native's component model for a modular, maintainable
+              codebase. Expo Go accelerates the development feedback loop — allowing rapid iteration
+              across physical devices without native build overhead. State management and navigation
+              are handled through established React Native patterns, keeping the architecture clean
+              as the project grows.
+            </p>
+            <p>
+              User experience and accessibility are core design constraints. The mental health
+              context demands interfaces that are calm, intuitive, and trustworthy. Every screen
+              goes through functional testing before milestone delivery.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="detail-sidebar">
+          <div class="sidebar-card fade-up">
+            <p class="sidebar-card-title">Project Details</p>
+            <div class="sidebar-meta">
+              <div class="sidebar-meta-item">
+                <p class="sidebar-meta-label">Role</p>
+                <p class="sidebar-meta-value">App Development Team Lead</p>
+              </div>
+              <div class="sidebar-meta-item">
+                <p class="sidebar-meta-label">Organization</p>
+                <p class="sidebar-meta-value">Penn State Behrend VAR Lab</p>
+              </div>
+              <div class="sidebar-meta-item">
+                <p class="sidebar-meta-label">Timeline</p>
+                <p class="sidebar-meta-value">Mar 2025 – Present</p>
+              </div>
+              <div class="sidebar-meta-item">
+                <p class="sidebar-meta-label">Team Size</p>
+                <p class="sidebar-meta-value">5 developers</p>
+              </div>
+              <div class="sidebar-meta-item">
+                <p class="sidebar-meta-label">Platform</p>
+                <p class="sidebar-meta-value">iOS &amp; Android</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card fade-up delay-1">
+            <p class="sidebar-card-title">Technologies</p>
+            <div class="sidebar-chips">
+              <span class="chip">React Native</span>
+              <span class="chip">Expo Go</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Git</span>
+              <span class="chip">VS Code</span>
+            </div>
+          </div>
+
+          <div class="sidebar-card fade-up delay-2">
+            <p class="sidebar-card-title">Inquire</p>
+            <p style="font-size:13px; color:var(--text-muted); line-height:1.7; margin-bottom:20px;">
+              Interested in this work or want to learn more about the project?
+            </p>
+            <a href="contact.html" class="btn-primary" style="width:100%; text-align:center; display:block;">Get In Touch</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ===== NEXT PROJECT ===== -->
+    <div class="detail-next">
+      <p class="section-label fade-in">Up Next</p>
+      <h2 class="fade-up">Hackathon <em style="color:var(--gold-lt);">Project</em></h2>
+      <p class="next-sub fade-in delay-1">Competing, collaborating, and shipping a solution under pressure.</p>
+      <div class="detail-next-actions fade-up delay-1">
+        <a href="project-hackathon.html" class="btn-primary">View Project</a>
+        <a href="projects.html" class="btn-outline-light">All Projects</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/Logo_White.png" alt="MK Logo" class="footer-logo">
+          <div>
+            <div class="footer-name">Morgan Koch</div>
+            <div class="footer-tagline">Programmer &amp; Project Manager</div>
+          </div>
+        </div>
+        <p class="footer-desc">CS student at Penn State Behrend, passionate about building solutions to complex problems.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/moekoch" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/moekoch" target="_blank" rel="noopener" class="social-link"><i class="fab fa-github"></i></a>
+        <a href="mailto:ekoch.morgan@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <nav>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

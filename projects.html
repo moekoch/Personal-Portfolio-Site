@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +20,7 @@
     <nav class="desktop-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="resume.html">Resume</a>
       <a href="contact.html">Contact</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -56,7 +57,7 @@
       <div class="projects-filter fade-in">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="app-dev">App Development</button>
-        <button class="filter-btn" data-filter="it-pm">IT &amp; Project Mgmt</button>
+        <button class="filter-btn" data-filter="hackathon">Hackathon</button>
         <button class="filter-btn" data-filter="web">Web &amp; Design</button>
         <button class="filter-btn" data-filter="ai">AI &amp; Research</button>
       </div>
@@ -66,13 +67,13 @@
         <!-- VAR Lab -->
         <div class="project-card-lg fade-up" data-category="app-dev">
           <div class="card-img-wrap" style="background:linear-gradient(135deg,#334551,#447199);">
-            <img src="assets/Logo_Black.png"
+            <img src="assets/VAR_LinkedIn.jpg"
                  alt="VAR Lab App Development"
-                 onerror="this.style.display='none'">
+                 onerror="this.style.objectFit='contain';this.style.padding='2rem'">
           </div>
           <div class="project-card-body">
             <p class="project-tag">App Development &middot; Team Lead</p>
-            <h3>VAR Lab Application - Landing Place</h3>
+            <h3>VAR Lab Application</h3>
             <div class="project-chips">
               <span class="chip">React Native</span>
               <span class="chip">Expo Go</span>
@@ -81,45 +82,43 @@
             </div>
             <p>
               As App Development Team Lead at Penn State Behrend's Virtual/Augmented Reality Lab,
-              I oversee the full software development lifecycle for a mental health mobile applications.
+              I oversee the full software development lifecycle for mental health mobile applications.
               Leading a team of 5 programmers, managing code quality, milestone tracking, and
               optimizing for performance and UX consistency.
             </p>
-            <a href="contact.html" class="project-link">Inquire About This Work <i class="fas fa-arrow-right"></i></a>
+            <a href="project-var-lab.html" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
-        <!-- TE Connectivity -->
-        <div class="project-card-lg fade-up delay-1" data-category="it-pm">
+        <!-- Hackathon -->
+        <div class="project-card-lg fade-up delay-1" data-category="hackathon">
           <div class="card-img-wrap" style="background:linear-gradient(135deg,#be9c67,#334551);">
             <img src="assets/Logo_Black.png"
-                 alt="TE Connectivity IT PM Internship"
+                 alt="Hackathon Project"
+                 style="object-fit:contain; padding:2.5rem;"
                  onerror="this.style.display='none'">
           </div>
           <div class="project-card-body">
-            <p class="project-tag">IT &middot; Project Management &middot; Internship</p>
-            <h3>TE Connectivity Internship</h3>
+            <p class="project-tag">Hackathon &middot; Team Project</p>
+            <h3>Hackathon Project</h3>
             <div class="project-chips">
-              <span class="chip">CONOPS</span>
-              <span class="chip">BRD</span>
-              <span class="chip">RASCI</span>
-              <span class="chip">Stakeholder Mgmt</span>
-              <span class="chip">Global Trade</span>
+              <span class="chip">Hackathon</span>
+              <span class="chip">Rapid Prototyping</span>
+              <span class="chip">Teamwork</span>
             </div>
             <p>
-              Summer 2025 IT Project Management intern at TE Connectivity (Harrisburg, PA).
-              Organized and facilitated meetings with stakeholders, created PM documentation
-              including CONOPS, BRD, and RASCI charts, and participated in a week-long
-              global trade workshop covering multi-region coordination.
+              Competed in a timed hackathon challenge, collaborating with a team to design and
+              ship a working solution from concept to demo. Tackled a real-world problem under
+              pressure, producing both technical and design deliverables within the event window.
             </p>
-            <a href="contact.html" class="project-link">Inquire About This Work <i class="fas fa-arrow-right"></i></a>
+            <a href="project-hackathon.html" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
         <!-- Personal ePortfolio -->
         <div class="project-card-lg fade-up" data-category="web">
           <div class="card-img-wrap" style="background:linear-gradient(135deg,#447199,#be9c67);">
-            <img src="assets/Logo_Black.png"
+            <img src="assets/WorkingOnPortfolioSite.jpg"
                  alt="Personal ePortfolio"
                  onerror="this.style.display='none'">
           </div>
@@ -138,7 +137,7 @@
               brand system. Features include a dark/light mode toggle, smooth scroll animations,
               mobile-responsive layout, clip-path image shapes, and a custom contact modal.
             </p>
-            <a href="https://github.com" target="_blank" rel="noopener" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+            <a href="project-eportfolio.html" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
@@ -147,6 +146,7 @@
           <div class="card-img-wrap" style="background:linear-gradient(135deg,#222f3a,#6b9fc4);">
             <img src="assets/Logo_Black.png"
                  alt="NVIDIA Deep Learning Certification"
+                 style="object-fit:contain; padding:2.5rem;"
                  onerror="this.style.display='none'">
           </div>
           <div class="project-card-body">
@@ -164,14 +164,14 @@
               ≥92% accuracy on the validation dataset, earning the NVIDIA Fundamentals
               of Deep Learning Certification (October 2024).
             </p>
-            <a href="contact.html" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            <a href="project-nvidia.html" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- ===== CTA ===== -->
     <section style="background:var(--bg-alt); text-align:center; padding:80px 8%;">
       <p class="section-label fade-in">Have something in mind?</p>
       <h2 class="section-title fade-up" style="margin:0 auto 20px;">Let's Build Something Together</h2>
