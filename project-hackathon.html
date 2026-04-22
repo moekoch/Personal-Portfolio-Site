@@ -1,80 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hackathon Project — Morgan Koch</title>
+  <title>RedScare — Morgan Koch</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ── Project detail styles – you can paste these into style.css ── */
-    .detail-back {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 11px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: rgba(255,255,255,0.45);
-      margin-bottom: 28px; transition: color 0.3s ease;
-    }
-    .detail-back:hover { color: var(--gold); }
-    .detail-back i { font-size: 10px; }
-
-    .page-hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-    .page-hero-chip {
-      background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);
-      font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; padding: 5px 14px;
-      border-radius: 20px; border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .detail-section { padding: 88px 8%; }
-    .detail-grid {
-      display: grid; grid-template-columns: 1fr 300px;
-      gap: 72px; align-items: start;
-    }
-
-    .detail-main > * + * { margin-top: 44px; }
-    .detail-block-label {
-      font-size: 11px; font-weight: 700; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
-    }
-    .detail-main h2 { font-size: clamp(30px, 3.5vw, 42px); color: var(--text); margin-bottom: 16px; }
-    .detail-main p { font-size: 14px; color: var(--text-muted); line-height: 1.9; margin-bottom: 14px; }
-    .detail-main p:last-child { margin-bottom: 0; }
-
-    .contribution-list { list-style: none; margin-top: 4px; display: grid; gap: 10px; }
-    .contribution-list li {
-      display: flex; gap: 16px; align-items: flex-start;
-      font-size: 13px; color: var(--text-muted); line-height: 1.75;
-    }
-    .contribution-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
-
-    .detail-sidebar { display: grid; gap: 20px; }
-    .sidebar-card { background: var(--surface); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow); }
-    .sidebar-card-title {
-      font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
-    }
-    .sidebar-meta { display: grid; gap: 14px; }
-    .sidebar-meta-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 3px; }
-    .sidebar-meta-value { font-size: 13px; font-weight: 500; color: var(--text); }
-    .sidebar-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-
-    .detail-hero-img { width: 100%; border-radius: var(--radius-lg); overflow: hidden; margin-top: -32px; box-shadow: var(--shadow-lg); aspect-ratio: 16/9; position: relative; z-index: 2; }
-    .detail-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .detail-hero-img.contain img { object-fit: contain; padding: 2.5rem; background: linear-gradient(135deg, #be9c67, #334551); }
-
-    .detail-next { background: var(--dark-deep); padding: 88px 8%; text-align: center; position: relative; overflow: hidden; }
-    body.dark .detail-next { background: #111c26; }
-    .detail-next::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 50% 0%, rgba(190,156,103,0.07) 0%, transparent 65%); }
-    .detail-next h2 { font-size: clamp(36px, 5vw, 60px); color: #fff; margin: 0 auto 16px; position: relative; }
-    .detail-next .next-sub { font-size: 13px; color: rgba(255,255,255,0.4); max-width: 420px; margin: 0 auto 40px; line-height: 1.8; position: relative; }
-    .detail-next-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
-    .btn-outline-light { display: inline-block; padding: 14px 36px; background: transparent; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border: 1.5px solid rgba(255,255,255,0.2); border-radius: var(--radius); cursor: pointer; transition: all 0.3s ease; }
-    .btn-outline-light:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
-
-    @media (max-width: 960px) { .detail-grid { grid-template-columns: 1fr; gap: 48px; } .detail-sidebar { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 600px) { .detail-sidebar { grid-template-columns: 1fr; } }
-  </style>
 </head>
 <body>
 
@@ -114,24 +47,23 @@
       <a href="projects.html" class="detail-back">
         <i class="fas fa-arrow-left"></i> All Projects
       </a>
-      <p class="page-hero-label">Hackathon &middot; Team Project</p>
-      <!-- TODO: Replace with real event name e.g. "HackPSB 2024" -->
-      <h1>Hackathon<br><em style="color:var(--gold-lt);">Project</em></h1>
-      <!-- TODO: Replace with your one-line project description -->
-      <p>Competed in a timed hackathon, collaborating with a team to design and ship a working solution from concept to demo under pressure.</p>
+      <p class="page-hero-label">Hackathon &middot; Penn State University &middot; April 2026</p>
+      <h1>RedScare<br><em style="color:var(--gold-lt);">Hackathon Project</em></h1>
+      <p>A period tracking and health insights web app built with one teammate in a 12-hour hackathon, focused on creating a more thoughtful and user-friendly approach to women's health.</p>
       <div class="page-hero-chips">
-        <span class="page-hero-chip">Hackathon</span>
-        <!-- TODO: Add your real tech stack chips below -->
-        <span class="page-hero-chip">Team Project</span>
-        <span class="page-hero-chip">Rapid Prototyping</span>
+        <span class="page-hero-chip">HTML/EJS</span>
+        <span class="page-hero-chip">JavaScript</span>
+        <span class="page-hero-chip">Supabase</span>
+        <span class="page-hero-chip">Anthropic API</span>
+        <span class="page-hero-chip">Data Visualization</span>
       </div>
     </div>
 
     <!-- ===== HERO IMAGE ===== -->
     <div style="padding: 0 8%;">
       <div class="detail-hero-img contain fade-up">
-        <!-- TODO: Replace src with a real project screenshot or event photo -->
-        <img src="assets/Logo_Black.png" alt="Hackathon Project" />
+        <!-- Replace with a real screenshot once available -->
+        <img src="assets/Logo_Black.png" alt="RedScare Hackathon Project" />
       </div>
     </div>
 
@@ -144,45 +76,72 @@
 
           <div class="fade-up">
             <p class="detail-block-label">The Challenge</p>
-            <!-- TODO: Fill in the hackathon prompt / problem statement -->
-            <h2>The Problem We Solved</h2>
+            <h2>12 Hours to Ship Something Real</h2>
             <p>
-              [Describe the hackathon's problem statement or theme here. What challenge were you
-              and your team given? What constraints did you work within — time limit, technology
-              requirements, judging criteria?]
+              The hackathon prompt challenged participants to build something meaningful within
+              a 12-hour window. My teammate and I zeroed in on a gap we both noticed: the
+              existing tools for period and cycle tracking are either overly clinical, cluttered
+              with advertising, or lack any real intelligence behind their insights.
+            </p>
+            <p>
+              We set out to build RedScare — a more thoughtful, user-centered approach to
+              women's health tracking that combined clean UX with genuinely useful, AI-powered
+              analysis.
             </p>
           </div>
 
           <div class="fade-up">
             <p class="detail-block-label">What We Built</p>
-            <!-- TODO: Describe your solution -->
-            <h2>Our Solution</h2>
-            <p>
-              [Describe the solution your team built. What does it do? Who is it for?
-              What problem does it solve? Include any notable technical or design decisions
-              you made during the event.]
-            </p>
+            <h2>Features &amp; Functionality</h2>
+            <div class="feature-grid">
+              <div class="feature-card">
+                <i class="fas fa-calendar-alt"></i>
+                <strong>Cycle &amp; Symptom Tracking</strong>
+                <p>Log periods, symptoms, and mood over time with a clean, low-friction interface designed for daily use.</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <strong>Insights Dashboard</strong>
+                <p>Interactive data visualizations for spotting patterns and trends across cycles — built without a charting library.</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-robot"></i>
+                <strong>AI-Powered Analysis</strong>
+                <p>Integrated the Anthropic Claude API to generate personalized health insights based on the user's tracked data.</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-database"></i>
+                <strong>Real-Time Data</strong>
+                <p>Supabase powers the backend — authentication, database, and real-time sync all in one layer.</p>
+              </div>
+            </div>
           </div>
 
           <div class="fade-up">
             <p class="detail-block-label">My Contributions</p>
             <h2>What I Worked On</h2>
             <ul class="contribution-list">
-              <!-- TODO: Fill in your specific contributions -->
-              <li>[Describe your primary role — frontend, backend, design, PM, etc.]</li>
-              <li>[Add a specific technical contribution you made.]</li>
-              <li>[Add another contribution — feature built, problem solved, etc.]</li>
-              <li>[Note any leadership or coordination work you did within the team.]</li>
+              <li>Co-architected the full-stack structure using EJS templating, CSS, and vanilla JavaScript on the frontend with Supabase handling auth and data persistence.</li>
+              <li>Built the interactive data visualization dashboard from scratch — translating raw cycle data into readable trend charts without relying on an external charting library.</li>
+              <li>Integrated the Anthropic Claude API to generate contextual, personalized health insights from the user's logged data.</li>
+              <li>Contributed to UX decisions and interface design throughout the build, keeping the experience calm and approachable given the sensitive subject matter.</li>
+              <li>Collaborated closely with my teammate under time pressure — scoping features, dividing work, and integrating our respective pieces into a cohesive, working product by demo time.</li>
             </ul>
           </div>
 
           <div class="fade-up">
-            <p class="detail-block-label">Outcome</p>
-            <!-- TODO: How did it go? Placement, recognition, or lessons learned? -->
-            <h2>Results &amp; Takeaways</h2>
+            <p class="detail-block-label">Outcome &amp; Reflection</p>
+            <h2>Shipping in 12 Hours</h2>
             <p>
-              [Did your team place or receive recognition? What was the judges' feedback?
-              What did you learn from the experience — technically or about working under pressure?]
+              We successfully delivered a working, demo-ready application within the event window —
+              cycle tracking, insights dashboard, AI analysis, and all. Building under a hard
+              time constraint forced fast decision-making about what to scope in vs. cut, and
+              sharpened my ability to stay execution-focused even when the problem space is broad.
+            </p>
+            <p>
+              Using the Anthropic API mid-hackathon was a highlight — seeing the model produce
+              genuinely useful, contextual health insights from structured user data in real time
+              validated the core idea quickly and added a layer of polish that stood out in the demo.
             </p>
           </div>
 
@@ -194,47 +153,48 @@
             <p class="sidebar-card-title">Event Details</p>
             <div class="sidebar-meta">
               <div>
+                <p class="sidebar-meta-label">Project</p>
+                <p class="sidebar-meta-value">RedScare</p>
+              </div>
+              <div>
                 <p class="sidebar-meta-label">Event</p>
-                <!-- TODO: Real event name -->
-                <p class="sidebar-meta-value">[Hackathon Name]</p>
+                <p class="sidebar-meta-value">Penn State Hackathon</p>
               </div>
               <div>
                 <p class="sidebar-meta-label">Date</p>
-                <!-- TODO: Real date -->
-                <p class="sidebar-meta-value">[Month Year]</p>
-              </div>
-              <div>
-                <p class="sidebar-meta-label">Team Size</p>
-                <!-- TODO: -->
-                <p class="sidebar-meta-value">[# members]</p>
+                <p class="sidebar-meta-value">April 2026</p>
               </div>
               <div>
                 <p class="sidebar-meta-label">Duration</p>
-                <!-- TODO: e.g. "24 hours" -->
-                <p class="sidebar-meta-value">[Duration]</p>
+                <p class="sidebar-meta-value">12 hours</p>
               </div>
               <div>
-                <p class="sidebar-meta-label">Result</p>
-                <!-- TODO: Placement or participation note -->
-                <p class="sidebar-meta-value">[Result / Placement]</p>
+                <p class="sidebar-meta-label">Team Size</p>
+                <p class="sidebar-meta-value">2 members</p>
+              </div>
+              <div>
+                <p class="sidebar-meta-label">Focus</p>
+                <p class="sidebar-meta-value">Women's Health &amp; AI</p>
               </div>
             </div>
           </div>
 
           <div class="sidebar-card fade-up delay-1">
-            <p class="sidebar-card-title">Technologies Used</p>
+            <p class="sidebar-card-title">Tech Stack</p>
             <div class="sidebar-chips">
-              <!-- TODO: Replace with your real tech stack -->
-              <span class="chip">[Language]</span>
-              <span class="chip">[Framework]</span>
-              <span class="chip">[Tool]</span>
+              <span class="chip">HTML/EJS</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Supabase</span>
+              <span class="chip">Anthropic API</span>
+              <span class="chip">Data Visualization</span>
             </div>
           </div>
 
           <div class="sidebar-card fade-up delay-2">
-            <p class="sidebar-card-title">Inquire</p>
+            <p class="sidebar-card-title">Interested?</p>
             <p style="font-size:13px; color:var(--text-muted); line-height:1.7; margin-bottom:20px;">
-              Want to know more about this project or explore collaboration?
+              Want to know more or talk through the project?
             </p>
             <a href="contact.html" class="btn-primary" style="width:100%; text-align:center; display:block;">Get In Touch</a>
           </div>
