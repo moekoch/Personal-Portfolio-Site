@@ -873,7 +873,7 @@ body.dark footer { background: #111c26; }
     .sidebar-chips { display: flex; flex-wrap: wrap; gap: 6px; }
     .detail-hero-img { width: 100%; border-radius: var(--radius-lg); overflow: hidden; margin-top: -32px; box-shadow: var(--shadow-lg); aspect-ratio: 16/9; position: relative; z-index: 2; }
     .detail-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .detail-hero-img.contain img { object-fit: contain; background: var(--bg); }
+    .detail-hero-img.contain img { object-fit: contain; padding: 2.5rem; background: linear-gradient(135deg, #be9c67, #334551); }
     .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
     .feature-card { background: var(--bg-alt); border-radius: var(--radius-lg); padding: 20px; border-left: 3px solid var(--gold); }
     body.dark .feature-card { background: var(--surface-alt); }
